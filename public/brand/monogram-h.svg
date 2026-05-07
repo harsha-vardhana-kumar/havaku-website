@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Background: Ivory -->
+  <rect width="200" height="200" fill="#FAF7F2"/>
+
+  <!-- Outer ring -->
+  <circle cx="100" cy="100" r="88" stroke="#C9A96E" stroke-width="0.8" fill="none" opacity="0.25"/>
+  <circle cx="100" cy="100" r="84" stroke="#C9A96E" stroke-width="0.4" fill="none" opacity="0.15"/>
+
+  <!-- H Monogram — Cormorant Garamond Italic Light, centred -->
+  <text x="100" y="113" font-family="'Cormorant Garamond', 'Georgia', serif" font-size="100" font-weight="300" font-style="italic" fill="#1A1A1A" text-anchor="middle" dominant-baseline="auto" opacity="0.9">H</text>
+
+  <!-- Lotus petals at 4 cardinal points of the H (decorative) -->
+  <g stroke="#C9A96E" stroke-width="0.6" fill="none" stroke-linecap="round" opacity="0.7">
+    <!-- Top -->
+    <ellipse cx="100" cy="22" rx="3" ry="9" transform="rotate(0,100,22)"/>
+    <!-- Bottom -->
+    <ellipse cx="100" cy="178" rx="3" ry="9" transform="rotate(180,100,178)"/>
+    <!-- Left -->
+    <ellipse cx="22" cy="100" rx="3" ry="9" transform="rotate(90,22,100)"/>
+    <!-- Right -->
+    <ellipse cx="178" cy="100" rx="3" ry="9" transform="rotate(270,178,100)"/>
+  </g>
+
+  <!-- Bindi centre of ring -->
+  <circle cx="100" cy="100" r="1.5" fill="#C9A96E"/>
+
+  <!-- Gold divider below -->
+  <line x1="75" y1="148" x2="125" y2="148" stroke="#C9A96E" stroke-width="1"/>
+  <text x="100" y="165" font-family="'Manrope', 'Arial', sans-serif" font-size="8" font-weight="300" letter-spacing="4" fill="#7D6B5E" text-anchor="middle">HAVAKU</text>
+</svg>

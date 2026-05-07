@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HAVAKU — Official Brand Kit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Manrope:wght@200;300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ivory: #FAF7F2;
+      --gold: #C9A96E;
+      --blush: #F2D6CF;
+      --taupe: #7D6B5E;
+      --soft-black: #1A1A1A;
+      --warm-white: #FFFDF9;
+      --rose-gold: #B76E79;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Manrope', sans-serif;
+      background: var(--ivory);
+      color: var(--soft-black);
+      -webkit-font-smoothing: antialiased;
+      padding: 40px;
+    }
+    .kit-container { max-width: 1000px; margin: 0 auto; background: white; border-radius: 24px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.05); }
+    
+    section { padding: 60px 40px; border-bottom: 1px solid rgba(201,169,110,0.15); }
+    .dark-sec { background: var(--soft-black); color: var(--warm-white); }
+    
+    .sec-label { font-size: 10px; font-weight: 500; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 30px; }
+    
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; }
+    .card { background: rgba(201,169,110,0.03); border-radius: 12px; padding: 30px; display: flex; flex-direction: column; align-items: center; gap: 20px; transition: transform 0.3s ease; }
+    .card:hover { transform: translateY(-5px); }
+    .card img { max-width: 100%; height: auto; }
+    
+    .dl-link { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); text-decoration: none; border: 1px solid rgba(201,169,110,0.3); padding: 8px 16px; border-radius: 4px; }
+    .dl-link:hover { background: var(--gold); color: white; }
+
+    .favicon-grid { display: flex; gap: 20px; align-items: flex-end; flex-wrap: wrap; }
+    .favicon-item { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+    .favicon-item span { font-size: 10px; opacity: 0.6; }
+
+    .color-grid { display: flex; gap: 15px; flex-wrap: wrap; }
+    .swatch { width: 80px; text-align: center; }
+    .swatch-box { width: 80px; height: 80px; border-radius: 12px; margin-bottom: 10px; border: 1px solid rgba(0,0,0,0.05); }
+    .swatch-name { font-size: 10px; font-weight: 600; }
+  </style>
+  <!-- PostHog -->
+  <script>
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="ci init Pi Ci ft Oi Fi ki capture calculateEventProperties Ui register register_once register_for_session unregister unregister_for_session Bi getFeatureFlag getFeatureFlagPayload getFeatureFlagResult isFeatureEnabled reloadFeatureFlags updateFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey cancelPendingSurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException startExceptionAutocapture stopExceptionAutocapture loadToolbar get_property getSessionProperty ji Di createPersonProfile setInternalOrTestUser zi Ti Hi opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing Ai debug bt Ni getPageViewId captureTraceFeedback captureTraceMetric Ei".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    posthog.init('phc_xQW14YSSoNKJGlqk3ogNPDpsMLXpeM4bRV7ANsBgee3', {
+        api_host: 'https://havaku.com', // your managed reverse proxy domain
+        ui_host: 'https://us.posthog.com', // necessary because you're using a proxy, this way links will point back to PostHog properly
+        defaults: '2026-01-30',
+        person_profiles: 'identified_only', // or 'always' to create profiles for anonymous users as well
+    })
+  </script>
+</head>
+<body>
+
+  <div class="kit-container">
+    <!-- DARK LOGOS -->
+    <section class="dark-sec">
+      <div class="sec-label">01. Primary Logo — Dark Background</div>
+      <div class="grid">
+        <div class="card" style="background:rgba(255,255,255,0.03);">
+          <img src="logo-dark.svg" alt="Dark Logo" />
+          <a href="logo-dark.svg" download class="dl-link">Download SVG</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIGHT LOGOS -->
+    <section>
+      <div class="sec-label">02. Primary Logo — Light Background</div>
+      <div class="grid">
+        <div class="card">
+          <img src="logo-light.svg" alt="Light Logo" />
+          <a href="logo-light.svg" download class="dl-link">Download SVG</a>
+        </div>
+        <div class="card">
+          <img src="logo-horizontal.svg" alt="Horizontal Lockup" />
+          <a href="logo-horizontal.svg" download class="dl-link">Horizontal Lockup</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAVICONS -->
+    <section class="dark-sec">
+      <div class="sec-label">03. App Icon & Favicon System</div>
+      <div class="favicon-grid">
+        <div class="favicon-item"><img src="icon-96-dark.svg" width="96" alt="96px" /><span>96px</span><a href="icon-96-dark.svg" download class="dl-link">SVG</a></div>
+        <div class="favicon-item"><img src="icon-64-dark.svg" width="64" alt="64px" /><span>64px</span><a href="icon-64-dark.svg" download class="dl-link">SVG</a></div>
+        <div class="favicon-item"><img src="icon-32-dark.svg" width="32" alt="32px" /><span>32px</span><a href="icon-32-dark.svg" download class="dl-link">SVG</a></div>
+      </div>
+    </section>
+
+    <!-- COLORS -->
+    <section>
+      <div class="sec-label">04. Official Palette</div>
+      <div class="color-grid">
+        <div class="swatch"><div class="swatch-box" style="background:#1A1A1A;"></div><div class="swatch-name">Soft Black</div></div>
+        <div class="swatch"><div class="swatch-box" style="background:#C9A96E;"></div><div class="swatch-name">Champagne Gold</div></div>
+        <div class="swatch"><div class="swatch-box" style="background:#F2D6CF;"></div><div class="swatch-name">Blush Pink</div></div>
+        <div class="swatch"><div class="swatch-box" style="background:#B76E79;"></div><div class="swatch-name">Rose Gold</div></div>
+        <div class="swatch"><div class="swatch-box" style="background:#FAF7F2;"></div><div class="swatch-name">Ivory</div></div>
+      </div>
+    </section>
+  </div>
+
+</body>
+</html>

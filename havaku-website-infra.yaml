@@ -1,0 +1,144 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: HAVAKU - Static Website (S3 + CloudFront + Routing Fix)
+
+Resources:
+
+  # -------------------------------------------------------
+  # S3 Bucket (private)
+  # -------------------------------------------------------
+  WebsiteBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: havaku.com
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+      VersioningConfiguration:
+        Status: Enabled
+
+  # -------------------------------------------------------
+  # Origin Access Control (OAC)
+  # -------------------------------------------------------
+  CloudFrontOAC:
+    Type: AWS::CloudFront::OriginAccessControl
+    Properties:
+      OriginAccessControlConfig:
+        Name: havaku-oac
+        OriginAccessControlOriginType: s3
+        SigningBehavior: always
+        SigningProtocol: sigv4
+
+  # -------------------------------------------------------
+  # S3 Bucket Policy - allow only CloudFront
+  # -------------------------------------------------------
+  WebsiteBucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref WebsiteBucket
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Sid: AllowCloudFrontOnly
+            Effect: Allow
+            Principal:
+              Service: cloudfront.amazonaws.com
+            Action: s3:GetObject
+            Resource: !Sub "${WebsiteBucket.Arn}/*"
+            Condition:
+              StringEquals:
+                AWS:SourceArn: !Sub "arn:aws:cloudfront::${AWS::AccountId}:distribution/${CloudFrontDistribution}"
+
+  # -------------------------------------------------------
+  # CloudFront Function - Next.js URL rewriting
+  # /jewelry/     → /jewelry/index.html
+  # /bridal/      → /bridal/index.html
+  # /about/       → /about/index.html
+  # etc.
+  # -------------------------------------------------------
+  UrlRewriteFunction:
+    Type: AWS::CloudFront::Function
+    Properties:
+      Name: havaku-url-rewrite
+      AutoPublish: true
+      FunctionConfig:
+        Comment: Rewrite URLs for Next.js static export
+        Runtime: cloudfront-js-2.0
+      FunctionCode: |
+        async function handler(event) {
+          var request = event.request;
+          var uri = request.uri;
+
+          // If URI ends with '/', append 'index.html'
+          if (uri.endsWith('/')) {
+            request.uri += 'index.html';
+          }
+          // If URI has no extension, append '/index.html'
+          else if (!uri.includes('.')) {
+            request.uri += '/index.html';
+          }
+
+          return request;
+        }
+
+  # -------------------------------------------------------
+  # CloudFront Distribution
+  # -------------------------------------------------------
+  CloudFrontDistribution:
+    Type: AWS::CloudFront::Distribution
+    Properties:
+      DistributionConfig:
+        Comment: HAVAKU Website
+        Enabled: true
+        DefaultRootObject: index.html
+        HttpVersion: http2and3
+        IPV6Enabled: true
+        PriceClass: PriceClass_100
+
+        Origins:
+          - Id: S3Origin
+            DomainName: !GetAtt WebsiteBucket.RegionalDomainName
+            S3OriginConfig:
+              OriginAccessIdentity: ""
+            OriginAccessControlId: !GetAtt CloudFrontOAC.Id
+
+        DefaultCacheBehavior:
+          TargetOriginId: S3Origin
+          ViewerProtocolPolicy: redirect-to-https
+          AllowedMethods: [GET, HEAD, OPTIONS]
+          CachedMethods: [GET, HEAD]
+          Compress: true
+          CachePolicyId: 658327ea-f89d-4fab-a63d-7e88639e58f6
+          OriginRequestPolicyId: 88a5eaf4-2fd4-4709-b370-b4c650ea3fcf
+          FunctionAssociations:
+            - EventType: viewer-request
+              FunctionARN: !GetAtt UrlRewriteFunction.FunctionARN
+
+        # Fallback for any missed routes
+        CustomErrorResponses:
+          - ErrorCode: 403
+            ResponseCode: 200
+            ResponsePagePath: /index.html
+            ErrorCachingMinTTL: 0
+          - ErrorCode: 404
+            ResponseCode: 200
+            ResponsePagePath: /index.html
+            ErrorCachingMinTTL: 0
+
+# -------------------------------------------------------
+# Outputs
+# -------------------------------------------------------
+Outputs:
+
+  BucketName:
+    Description: S3 Bucket Name - upload your website files here
+    Value: !Ref WebsiteBucket
+
+  CloudFrontDistributionId:
+    Description: CloudFront Distribution ID - use for cache invalidation
+    Value: !Ref CloudFrontDistribution
+
+  CloudFrontURL:
+    Description: Your website URL - open this in browser
+    Value: !Sub "https://${CloudFrontDistribution.DomainName}"

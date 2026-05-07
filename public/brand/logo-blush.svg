@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220" width="400" height="220">
+  <!-- Background: Blush Pink -->
+  <rect width="400" height="220" fill="#F2D6CF"/>
+
+  <!-- Lotus Icon Mark (8-petalled) -->
+  <g transform="translate(200,52)" stroke="#B76E79" stroke-width="0.8" fill="none" stroke-linecap="round">
+    <ellipse cx="0" cy="-14" rx="4.5" ry="13" transform="rotate(0)"/>
+    <ellipse cx="0" cy="-14" rx="4.5" ry="13" transform="rotate(45)"/>
+    <ellipse cx="0" cy="-14" rx="4.5" ry="13" transform="rotate(90)"/>
+    <ellipse cx="0" cy="-14" rx="4.5" ry="13" transform="rotate(135)"/>
+    <ellipse cx="0" cy="-14" rx="4.5" ry="13" transform="rotate(180)"/>
+    <ellipse cx="0" cy="-14" rx="4.5" ry="13" transform="rotate(225)"/>
+    <ellipse cx="0" cy="-14" rx="4.5" ry="13" transform="rotate(270)"/>
+    <ellipse cx="0" cy="-14" rx="4.5" ry="13" transform="rotate(315)"/>
+    <circle cx="0" cy="0" r="2" fill="#B76E79" stroke="none"/>
+    <circle cx="0" cy="0" r="22" stroke="#B76E79" stroke-width="0.5" opacity="0.35"/>
+  </g>
+
+  <!-- Botanical branches -->
+  <g stroke="#B76E79" stroke-width="0.6" fill="none" opacity="0.5" stroke-linecap="round">
+    <path d="M130,52 Q148,44 162,52"/>
+    <path d="M136,52 Q137,42 143,38"/>
+    <path d="M144,49 Q145,40 150,36"/>
+    <path d="M270,52 Q252,44 238,52"/>
+    <path d="M264,52 Q263,42 257,38"/>
+    <path d="M256,49 Q255,40 250,36"/>
+  </g>
+
+  <!-- Rule above wordmark -->
+  <line x1="175" y1="82" x2="225" y2="82" stroke="#C9A96E" stroke-width="0.8"/>
+
+  <!-- HAVAKU Wordmark — Rose Gold with Gold A's -->
+  <text x="200" y="116" font-family="'Cormorant Garamond', 'Georgia', serif" font-size="52" font-weight="300" font-style="italic" letter-spacing="9" fill="#7D6B5E" text-anchor="middle">
+    H<tspan fill="#C9A96E">A</tspan>V<tspan fill="#C9A96E">A</tspan>KU
+  </text>
+
+  <!-- Gold divider -->
+  <line x1="175" y1="126" x2="225" y2="126" stroke="#C9A96E" stroke-width="1"/>
+
+  <!-- Tagline -->
+  <text x="200" y="148" font-family="'Manrope', 'Arial', sans-serif" font-size="9" font-weight="300" letter-spacing="5.5" fill="#B76E79" text-anchor="middle">
+    BEAUTY &amp; BRIDAL
+  </text>
+
+  <!-- Bottom tagline -->
+  <text x="200" y="195" font-family="'Manrope', 'Arial', sans-serif" font-size="7.5" font-weight="300" letter-spacing="2" fill="#7D6B5E" text-anchor="middle" opacity="0.5" font-style="italic">
+    Handcrafted rituals for your most radiant self
+  </text>
+</svg>

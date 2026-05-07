@@ -1,0 +1,5 @@
+<!-- Lotus Icon Mark reusable template — used for all favicon/icon mark SVGs -->
+<!-- This is the shared lotus construction referenced in HAVAKU_Brand_Identity.md -->
+<!-- 8 petals, hairline strokes, bindi center dot, circular construction -->
+
+<!-- DARK 96x96 -->

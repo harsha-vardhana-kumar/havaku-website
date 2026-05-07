@@ -1,0 +1,477 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Manrope:wght@200;300;400;500&display=swap');
+
+/* ── OFFICIAL HAVAKU TOKENS ── */
+:root{
+  --ivory:#FAF7F2;
+  --gold:#C9A96E;
+  --gold-dark:#A8874A;
+  --blush:#F2D6CF;
+  --taupe:#7D6B5E;
+  --soft-black:#1A1A1A;
+  --warm-white:#FFFDF9;
+  --rose-gold:#B76E79;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:transparent;font-family:'Manrope',sans-serif;}
+
+/* ══ SECTION 1: Dark hero ══ */
+.s1{
+  background:#1A1A1A;
+  border-radius:16px 16px 0 0;
+  padding:64px 40px 60px;
+  display:flex;flex-direction:column;align-items:center;gap:40px;
+  position:relative;overflow:hidden;
+}
+/* Subtle warm glow */
+.s1::before{
+  content:'';position:absolute;top:-80px;left:50%;transform:translateX(-50%);
+  width:560px;height:280px;
+  background:radial-gradient(ellipse,rgba(201,169,110,0.10) 0%,transparent 65%);
+  pointer-events:none;
+}
+
+.chip{
+  font-family:'Manrope',sans-serif;
+  font-size:9px;font-weight:300;letter-spacing:0.38em;text-transform:uppercase;
+  color:rgba(201,169,110,0.45);
+}
+
+/* ── Primary wordmark ── */
+.wm-block{display:flex;flex-direction:column;align-items:center;gap:16px;}
+
+/* Botanical bar above */
+.bot-bar{display:flex;align-items:center;gap:0;}
+
+.wm-primary{
+  font-family:'Cormorant Garamond',serif;
+  font-size:80px;font-weight:300;font-style:italic;
+  letter-spacing:0.12em;
+  color:#FAF7F2;
+  line-height:1;
+  text-transform:uppercase;
+}
+.wm-primary .g{color:#C9A96E;}
+
+.brand-rule{
+  display:flex;align-items:center;gap:14px;width:100%;max-width:520px;margin-top:2px;
+}
+.br-line{flex:1;height:0.5px;background:linear-gradient(to right,transparent,rgba(201,169,110,0.45),transparent);}
+.br-text{
+  font-family:'Manrope',sans-serif;font-size:8.5px;font-weight:200;
+  letter-spacing:0.55em;text-transform:uppercase;color:rgba(201,169,110,0.55);
+  white-space:nowrap;
+}
+
+.wm-tagline{
+  font-family:'Cormorant Garamond',serif;font-size:15px;font-style:italic;font-weight:300;
+  letter-spacing:0.1em;color:rgba(250,247,242,0.45);margin-top:2px;
+}
+
+/* Gold divider (from spec) */
+.gold-div{width:50px;height:1px;background:#C9A96E;opacity:0.7;margin:4px auto 0;}
+
+/* ── Horizontal lockup ── */
+.h-lockup{
+  display:flex;align-items:center;gap:22px;
+  padding:18px 32px;
+  border:0.5px solid rgba(201,169,110,0.25);
+  border-radius:3px;
+}
+.h-wm{
+  font-family:'Cormorant Garamond',serif;
+  font-size:30px;font-weight:300;font-style:italic;
+  letter-spacing:0.12em;text-transform:uppercase;color:#FAF7F2;line-height:1;
+}
+.h-wm .g{color:#C9A96E;}
+.h-sub{display:flex;flex-direction:column;gap:4px;justify-content:center;}
+.h-rule{width:100%;height:0.5px;background:rgba(201,169,110,0.3);}
+.h-tag{
+  font-family:'Manrope',sans-serif;font-size:7.5px;font-weight:200;
+  letter-spacing:0.42em;text-transform:uppercase;color:rgba(201,169,110,0.5);
+}
+
+/* ── 3 lockup variants row ── */
+.var-row{display:flex;gap:32px;flex-wrap:wrap;justify-content:center;align-items:center;}
+.var-cell{display:flex;flex-direction:column;align-items:center;gap:8px;}
+.var-lbl{font-family:'Manrope',sans-serif;font-size:8px;font-weight:200;letter-spacing:0.2em;text-transform:uppercase;color:rgba(201,169,110,0.35);}
+
+/* ══ SECTION 2: Ivory light ══ */
+.s2{
+  background:#FAF7F2;
+  padding:56px 40px 52px;
+  display:flex;flex-direction:column;align-items:center;gap:20px;
+}
+.wm-light{
+  font-family:'Cormorant Garamond',serif;
+  font-size:76px;font-weight:300;font-style:italic;
+  letter-spacing:0.12em;text-transform:uppercase;
+  color:#1A1A1A;line-height:1;
+}
+.wm-light .g{color:#C9A96E;}
+.wm-light-tag{
+  font-family:'Manrope',sans-serif;font-size:8.5px;font-weight:200;
+  letter-spacing:0.55em;text-transform:uppercase;color:rgba(125,107,94,0.5);
+}
+.wm-light-tagline{
+  font-family:'Cormorant Garamond',serif;font-size:15px;font-style:italic;
+  color:rgba(125,107,94,0.6);letter-spacing:0.1em;
+}
+
+/* ══ SECTION 3: Blush pink variant ══ */
+.s3{
+  background:#F2D6CF;
+  padding:48px 40px;
+  display:flex;flex-direction:column;align-items:center;gap:18px;
+}
+.wm-blush{
+  font-family:'Cormorant Garamond',serif;
+  font-size:68px;font-weight:300;font-style:italic;
+  letter-spacing:0.12em;text-transform:uppercase;
+  color:#1A1A1A;line-height:1;
+}
+.wm-blush .g{color:#B76E79;}
+.blush-tag{
+  font-family:'Manrope',sans-serif;font-size:8.5px;font-weight:200;
+  letter-spacing:0.55em;text-transform:uppercase;color:rgba(183,110,121,0.7);
+}
+.blush-tagline{
+  font-family:'Cormorant Garamond',serif;font-size:14px;font-style:italic;
+  color:rgba(125,107,94,0.65);letter-spacing:0.1em;
+}
+
+/* ══ SECTION 4: Favicon ══ */
+.s4{
+  background:#1A1A1A;
+  padding:48px 40px;
+  display:flex;flex-direction:column;align-items:center;gap:28px;
+}
+.fav-grid{display:flex;gap:20px;flex-wrap:wrap;justify-content:center;align-items:flex-end;}
+.fav-cell{display:flex;flex-direction:column;align-items:center;gap:8px;}
+.fav-lbl{font-family:'Manrope',sans-serif;font-size:8px;font-weight:200;letter-spacing:0.14em;text-transform:uppercase;color:rgba(201,169,110,0.35);}
+
+/* ══ SECTION 5: Design tokens ══ */
+.s5{
+  background:#FAF7F2;
+  border-radius:0 0 16px 16px;
+  padding:48px 40px 56px;
+  display:flex;flex-direction:column;align-items:center;gap:36px;
+}
+.two-col{display:flex;gap:48px;flex-wrap:wrap;justify-content:center;align-items:flex-start;}
+
+.col{display:flex;flex-direction:column;gap:16px;}
+.col-title{font-family:'Manrope',sans-serif;font-size:8.5px;font-weight:300;letter-spacing:0.3em;text-transform:uppercase;color:rgba(125,107,94,0.5);}
+
+.swatch-row{display:flex;gap:10px;flex-wrap:wrap;}
+.sw{display:flex;flex-direction:column;align-items:center;gap:5px;}
+.sw-b{width:44px;height:44px;border-radius:8px;}
+.sw-n{font-size:8px;font-weight:300;letter-spacing:0.06em;color:rgba(26,26,26,0.5);text-align:center;font-family:'Manrope',sans-serif;}
+.sw-h{font-size:7.5px;color:rgba(26,26,26,0.35);font-family:'Manrope',sans-serif;}
+
+.vdiv{width:1px;height:120px;background:rgba(201,169,110,0.2);}
+.hdiv{width:60px;height:1px;background:rgba(201,169,110,0.35);margin:0 auto;}
+</style>
+</head>
+<body>
+
+<!-- ════ 1. DARK HERO ════ -->
+<div class="s1">
+  <div class="chip">Havaku · Official Brand Identity System</div>
+
+  <div class="wm-block">
+
+    <!-- Botanical ornament -->
+    <svg width="320" height="30" viewBox="0 0 320 30">
+      <!-- left branch -->
+      <path d="M8,15 C30,6 55,18 75,15" fill="none" stroke="#C9A96E" stroke-width="0.6" opacity="0.45"/>
+      <path d="M25,15 C32,7 42,8 50,13" fill="none" stroke="#C9A96E" stroke-width="0.45" opacity="0.35"/>
+      <ellipse cx="22" cy="10" rx="5" ry="2.8" fill="none" stroke="#C9A96E" stroke-width="0.45" opacity="0.3" transform="rotate(-28,22,10)"/>
+      <ellipse cx="58" cy="10" rx="5" ry="2.8" fill="none" stroke="#C9A96E" stroke-width="0.45" opacity="0.3" transform="rotate(18,58,10)"/>
+      <!-- connecting lines to center -->
+      <line x1="75" y1="15" x2="133" y2="15" stroke="#C9A96E" stroke-width="0.4" opacity="0.2"/>
+      <!-- center bloom (8-petal lotus) -->
+      <circle cx="160" cy="15" r="4" fill="none" stroke="#C9A96E" stroke-width="0.7" opacity="0.8"/>
+      <circle cx="160" cy="15" r="1.8" fill="#C9A96E" opacity="0.6"/>
+      <ellipse cx="160" cy="7" rx="2" ry="4.5" fill="none" stroke="#C9A96E" stroke-width="0.5" opacity="0.5"/>
+      <ellipse cx="160" cy="23" rx="2" ry="4.5" fill="none" stroke="#C9A96E" stroke-width="0.5" opacity="0.5"/>
+      <ellipse cx="152" cy="15" rx="4.5" ry="2" fill="none" stroke="#C9A96E" stroke-width="0.5" opacity="0.5"/>
+      <ellipse cx="168" cy="15" rx="4.5" ry="2" fill="none" stroke="#C9A96E" stroke-width="0.5" opacity="0.5"/>
+      <ellipse cx="154" cy="9" rx="3" ry="5" fill="none" stroke="#C9A96E" stroke-width="0.4" opacity="0.35" transform="rotate(-45,154,9)"/>
+      <ellipse cx="166" cy="9" rx="3" ry="5" fill="none" stroke="#C9A96E" stroke-width="0.4" opacity="0.35" transform="rotate(45,166,9)"/>
+      <ellipse cx="154" cy="21" rx="3" ry="5" fill="none" stroke="#C9A96E" stroke-width="0.4" opacity="0.35" transform="rotate(45,154,21)"/>
+      <ellipse cx="166" cy="21" rx="3" ry="5" fill="none" stroke="#C9A96E" stroke-width="0.4" opacity="0.35" transform="rotate(-45,166,21)"/>
+      <!-- right -->
+      <line x1="187" y1="15" x2="245" y2="15" stroke="#C9A96E" stroke-width="0.4" opacity="0.2"/>
+      <path d="M245,15 C265,6 290,18 312,15" fill="none" stroke="#C9A96E" stroke-width="0.6" opacity="0.45"/>
+      <path d="M270,15 C278,7 288,8 295,13" fill="none" stroke="#C9A96E" stroke-width="0.45" opacity="0.35"/>
+      <ellipse cx="262" cy="10" rx="5" ry="2.8" fill="none" stroke="#C9A96E" stroke-width="0.45" opacity="0.3" transform="rotate(-18,262,10)"/>
+      <ellipse cx="298" cy="10" rx="5" ry="2.8" fill="none" stroke="#C9A96E" stroke-width="0.45" opacity="0.3" transform="rotate(28,298,10)"/>
+    </svg>
+
+    <!-- Wordmark -->
+    <div class="wm-primary">H<span class="g">A</span>V<span class="g">A</span>KU</div>
+
+    <!-- Sub-brand rule -->
+    <div class="brand-rule">
+      <div class="br-line"></div>
+      <div class="br-text">Beauty &amp; Bridal</div>
+      <div class="br-line"></div>
+    </div>
+
+    <!-- Tagline -->
+    <div class="wm-tagline">Handcrafted rituals for your most radiant self</div>
+    <div class="gold-div"></div>
+  </div>
+
+  <!-- Horizontal lockup -->
+  <div class="h-lockup">
+    <svg width="44" height="44" viewBox="0 0 44 44">
+      <circle cx="22" cy="22" r="9" fill="none" stroke="#C9A96E" stroke-width="0.9" opacity="0.9"/>
+      <circle cx="22" cy="22" r="3.5" fill="#C9A96E" opacity="0.75"/>
+      <ellipse cx="22" cy="8" rx="3" ry="7" fill="none" stroke="#C9A96E" stroke-width="0.6" opacity="0.5"/>
+      <ellipse cx="22" cy="36" rx="3" ry="7" fill="none" stroke="#C9A96E" stroke-width="0.6" opacity="0.5"/>
+      <ellipse cx="8" cy="22" rx="7" ry="3" fill="none" stroke="#C9A96E" stroke-width="0.6" opacity="0.5"/>
+      <ellipse cx="36" cy="22" rx="7" ry="3" fill="none" stroke="#C9A96E" stroke-width="0.6" opacity="0.5"/>
+      <ellipse cx="11" cy="11" rx="4" ry="6.5" fill="none" stroke="#C9A96E" stroke-width="0.5" opacity="0.32" transform="rotate(-45,11,11)"/>
+      <ellipse cx="33" cy="11" rx="4" ry="6.5" fill="none" stroke="#C9A96E" stroke-width="0.5" opacity="0.32" transform="rotate(45,33,11)"/>
+      <ellipse cx="11" cy="33" rx="4" ry="6.5" fill="none" stroke="#C9A96E" stroke-width="0.5" opacity="0.32" transform="rotate(45,11,33)"/>
+      <ellipse cx="33" cy="33" rx="4" ry="6.5" fill="none" stroke="#C9A96E" stroke-width="0.5" opacity="0.32" transform="rotate(-45,33,33)"/>
+    </svg>
+    <div class="h-sub">
+      <div class="h-wm">H<span class="g">A</span>V<span class="g">A</span>KU</div>
+      <div class="h-rule"></div>
+      <div class="h-tag">Beauty &nbsp;&amp;&nbsp; Bridal</div>
+    </div>
+  </div>
+
+  <!-- 3 mini variants -->
+  <div class="var-row">
+    <!-- All caps minimal -->
+    <div class="var-cell">
+      <svg width="130" height="32" viewBox="0 0 130 32">
+        <text x="65" y="22" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="24" font-weight="300" fill="#FAF7F2" letter-spacing="8">HAVAKU</text>
+      </svg>
+      <div class="var-lbl">Minimal caps</div>
+    </div>
+    <!-- With lotus + text stacked -->
+    <div class="var-cell">
+      <svg width="110" height="60" viewBox="0 0 110 60">
+        <circle cx="55" cy="16" r="6" fill="none" stroke="#C9A96E" stroke-width="0.7" opacity="0.8"/>
+        <circle cx="55" cy="16" r="2.5" fill="#C9A96E" opacity="0.7"/>
+        <ellipse cx="55" cy="6" rx="2" ry="5" fill="none" stroke="#C9A96E" stroke-width="0.5" opacity="0.5"/>
+        <ellipse cx="55" cy="26" rx="2" ry="5" fill="none" stroke="#C9A96E" stroke-width="0.5" opacity="0.5"/>
+        <ellipse cx="45" cy="16" rx="5" ry="2" fill="none" stroke="#C9A96E" stroke-width="0.5" opacity="0.5"/>
+        <ellipse cx="65" cy="16" rx="5" ry="2" fill="none" stroke="#C9A96E" stroke-width="0.5" opacity="0.5"/>
+        <ellipse cx="47" cy="9" rx="2.5" ry="4.5" fill="none" stroke="#C9A96E" stroke-width="0.45" opacity="0.32" transform="rotate(-45,47,9)"/>
+        <ellipse cx="63" cy="9" rx="2.5" ry="4.5" fill="none" stroke="#C9A96E" stroke-width="0.45" opacity="0.32" transform="rotate(45,63,9)"/>
+        <ellipse cx="47" cy="23" rx="2.5" ry="4.5" fill="none" stroke="#C9A96E" stroke-width="0.45" opacity="0.32" transform="rotate(45,47,23)"/>
+        <ellipse cx="63" cy="23" rx="2.5" ry="4.5" fill="none" stroke="#C9A96E" stroke-width="0.45" opacity="0.32" transform="rotate(-45,63,23)"/>
+        <text x="55" y="46" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="20" font-style="italic" font-weight="300" fill="#FAF7F2" letter-spacing="4">Havaku</text>
+        <line x1="18" y1="52" x2="92" y2="52" stroke="#C9A96E" stroke-width="0.4" opacity="0.3"/>
+      </svg>
+      <div class="var-lbl">Stacked</div>
+    </div>
+    <!-- Monogram H only -->
+    <div class="var-cell">
+      <svg width="52" height="52" viewBox="0 0 52 52">
+        <rect x="1" y="1" width="50" height="50" rx="4" fill="none" stroke="#C9A96E" stroke-width="0.5" opacity="0.3"/>
+        <text x="26" y="36" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="36" font-style="italic" font-weight="300" fill="#C9A96E">H</text>
+      </svg>
+      <div class="var-lbl">Monogram</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ 2. IVORY LIGHT ════ -->
+<div class="s2">
+  <div class="chip" style="color:rgba(125,107,94,0.45);">Light · Ivory Background</div>
+  <svg width="300" height="26" viewBox="0 0 300 26">
+    <path d="M8,13 C28,5 52,17 72,13" fill="none" stroke="#C9A96E" stroke-width="0.6" opacity="0.38"/>
+    <ellipse cx="22" cy="8.5" rx="5" ry="2.8" fill="none" stroke="#C9A96E" stroke-width="0.45" opacity="0.28" transform="rotate(-28,22,8.5)"/>
+    <line x1="72" y1="13" x2="125" y2="13" stroke="#C9A96E" stroke-width="0.4" opacity="0.18"/>
+    <circle cx="150" cy="13" r="3.5" fill="none" stroke="#C9A96E" stroke-width="0.65" opacity="0.7"/>
+    <circle cx="150" cy="13" r="1.5" fill="#C9A96E" opacity="0.5"/>
+    <ellipse cx="150" cy="5" rx="1.8" ry="4" fill="none" stroke="#C9A96E" stroke-width="0.45" opacity="0.42"/>
+    <ellipse cx="150" cy="21" rx="1.8" ry="4" fill="none" stroke="#C9A96E" stroke-width="0.45" opacity="0.42"/>
+    <ellipse cx="142" cy="13" rx="4" ry="1.8" fill="none" stroke="#C9A96E" stroke-width="0.45" opacity="0.42"/>
+    <ellipse cx="158" cy="13" rx="4" ry="1.8" fill="none" stroke="#C9A96E" stroke-width="0.45" opacity="0.42"/>
+    <line x1="175" y1="13" x2="228" y2="13" stroke="#C9A96E" stroke-width="0.4" opacity="0.18"/>
+    <path d="M228,13 C248,5 272,17 292,13" fill="none" stroke="#C9A96E" stroke-width="0.6" opacity="0.38"/>
+    <ellipse cx="278" cy="8.5" rx="5" ry="2.8" fill="none" stroke="#C9A96E" stroke-width="0.45" opacity="0.28" transform="rotate(28,278,8.5)"/>
+  </svg>
+  <div class="wm-light">H<span class="g">A</span>V<span class="g">A</span>KU</div>
+  <div class="brand-rule" style="max-width:480px;">
+    <div class="br-line" style="background:linear-gradient(to right,transparent,rgba(201,169,110,0.38),transparent);"></div>
+    <div class="br-text" style="color:rgba(125,107,94,0.48);">Beauty &amp; Bridal</div>
+    <div class="br-line" style="background:linear-gradient(to right,transparent,rgba(201,169,110,0.38),transparent);"></div>
+  </div>
+  <div class="wm-light-tagline">Handcrafted rituals for your most radiant self</div>
+  <div class="gold-div"></div>
+</div>
+
+<!-- ════ 3. BLUSH PINK ════ -->
+<div class="s3">
+  <div class="chip" style="color:rgba(183,110,121,0.55);">Blush · Beauty Studio Variant</div>
+  <div class="wm-blush">H<span class="g">A</span>V<span class="g">A</span>KU</div>
+  <div class="brand-rule" style="max-width:420px;">
+    <div class="br-line" style="background:linear-gradient(to right,transparent,rgba(183,110,121,0.4),transparent);"></div>
+    <div class="br-text" style="color:rgba(183,110,121,0.6);">Beauty &amp; Bridal</div>
+    <div class="br-line" style="background:linear-gradient(to right,transparent,rgba(183,110,121,0.4),transparent);"></div>
+  </div>
+  <div class="blush-tagline">Handcrafted rituals for your most radiant self</div>
+  <div class="gold-div" style="background:#B76E79;"></div>
+</div>
+
+<!-- ════ 4. FAVICONS ════ -->
+<div class="s4">
+  <div class="chip">Favicon &amp; App Icon System</div>
+  <div class="fav-grid">
+
+    <!-- 96px -->
+    <div class="fav-cell">
+      <svg width="96" height="96" viewBox="0 0 96 96" style="border-radius:20px;background:#1A1A1A;">
+        <circle cx="48" cy="48" r="15" fill="none" stroke="#C9A96E" stroke-width="1.2"/>
+        <circle cx="48" cy="48" r="6" fill="#C9A96E" opacity="0.8"/>
+        <ellipse cx="48" cy="21" rx="4.5" ry="12" fill="none" stroke="#C9A96E" stroke-width="0.9" opacity="0.55"/>
+        <ellipse cx="48" cy="75" rx="4.5" ry="12" fill="none" stroke="#C9A96E" stroke-width="0.9" opacity="0.55"/>
+        <ellipse cx="21" cy="48" rx="12" ry="4.5" fill="none" stroke="#C9A96E" stroke-width="0.9" opacity="0.55"/>
+        <ellipse cx="75" cy="48" rx="12" ry="4.5" fill="none" stroke="#C9A96E" stroke-width="0.9" opacity="0.55"/>
+        <ellipse cx="28" cy="28" rx="6" ry="10" fill="none" stroke="#C9A96E" stroke-width="0.7" opacity="0.36" transform="rotate(-45,28,28)"/>
+        <ellipse cx="68" cy="28" rx="6" ry="10" fill="none" stroke="#C9A96E" stroke-width="0.7" opacity="0.36" transform="rotate(45,68,28)"/>
+        <ellipse cx="28" cy="68" rx="6" ry="10" fill="none" stroke="#C9A96E" stroke-width="0.7" opacity="0.36" transform="rotate(45,28,68)"/>
+        <ellipse cx="68" cy="68" rx="6" ry="10" fill="none" stroke="#C9A96E" stroke-width="0.7" opacity="0.36" transform="rotate(-45,68,68)"/>
+      </svg>
+      <div class="fav-lbl">96px</div>
+    </div>
+
+    <!-- 64px -->
+    <div class="fav-cell">
+      <svg width="64" height="64" viewBox="0 0 64 64" style="border-radius:13px;background:#1A1A1A;">
+        <circle cx="32" cy="32" r="10" fill="none" stroke="#C9A96E" stroke-width="1"/>
+        <circle cx="32" cy="32" r="4" fill="#C9A96E" opacity="0.78"/>
+        <ellipse cx="32" cy="14" rx="3" ry="8" fill="none" stroke="#C9A96E" stroke-width="0.8" opacity="0.52"/>
+        <ellipse cx="32" cy="50" rx="3" ry="8" fill="none" stroke="#C9A96E" stroke-width="0.8" opacity="0.52"/>
+        <ellipse cx="14" cy="32" rx="8" ry="3" fill="none" stroke="#C9A96E" stroke-width="0.8" opacity="0.52"/>
+        <ellipse cx="50" cy="32" rx="8" ry="3" fill="none" stroke="#C9A96E" stroke-width="0.8" opacity="0.52"/>
+        <ellipse cx="18" cy="18" rx="4" ry="7" fill="none" stroke="#C9A96E" stroke-width="0.6" opacity="0.33" transform="rotate(-45,18,18)"/>
+        <ellipse cx="46" cy="18" rx="4" ry="7" fill="none" stroke="#C9A96E" stroke-width="0.6" opacity="0.33" transform="rotate(45,46,18)"/>
+        <ellipse cx="18" cy="46" rx="4" ry="7" fill="none" stroke="#C9A96E" stroke-width="0.6" opacity="0.33" transform="rotate(45,18,46)"/>
+        <ellipse cx="46" cy="46" rx="4" ry="7" fill="none" stroke="#C9A96E" stroke-width="0.6" opacity="0.33" transform="rotate(-45,46,46)"/>
+      </svg>
+      <div class="fav-lbl">64px</div>
+    </div>
+
+    <!-- 48px -->
+    <div class="fav-cell">
+      <svg width="48" height="48" viewBox="0 0 48 48" style="border-radius:10px;background:#1A1A1A;">
+        <circle cx="24" cy="24" r="7.5" fill="none" stroke="#C9A96E" stroke-width="0.9"/>
+        <circle cx="24" cy="24" r="3" fill="#C9A96E" opacity="0.75"/>
+        <ellipse cx="24" cy="10" rx="2.5" ry="6" fill="none" stroke="#C9A96E" stroke-width="0.7" opacity="0.48"/>
+        <ellipse cx="24" cy="38" rx="2.5" ry="6" fill="none" stroke="#C9A96E" stroke-width="0.7" opacity="0.48"/>
+        <ellipse cx="10" cy="24" rx="6" ry="2.5" fill="none" stroke="#C9A96E" stroke-width="0.7" opacity="0.48"/>
+        <ellipse cx="38" cy="24" rx="6" ry="2.5" fill="none" stroke="#C9A96E" stroke-width="0.7" opacity="0.48"/>
+        <ellipse cx="13" cy="13" rx="3" ry="5.5" fill="none" stroke="#C9A96E" stroke-width="0.55" opacity="0.3" transform="rotate(-45,13,13)"/>
+        <ellipse cx="35" cy="13" rx="3" ry="5.5" fill="none" stroke="#C9A96E" stroke-width="0.55" opacity="0.3" transform="rotate(45,35,13)"/>
+        <ellipse cx="13" cy="35" rx="3" ry="5.5" fill="none" stroke="#C9A96E" stroke-width="0.55" opacity="0.3" transform="rotate(45,13,35)"/>
+        <ellipse cx="35" cy="35" rx="3" ry="5.5" fill="none" stroke="#C9A96E" stroke-width="0.55" opacity="0.3" transform="rotate(-45,35,35)"/>
+      </svg>
+      <div class="fav-lbl">48px</div>
+    </div>
+
+    <!-- 32px -->
+    <div class="fav-cell">
+      <svg width="32" height="32" viewBox="0 0 32 32" style="border-radius:6px;background:#1A1A1A;">
+        <circle cx="16" cy="16" r="5" fill="none" stroke="#C9A96E" stroke-width="0.85"/>
+        <circle cx="16" cy="16" r="2.2" fill="#C9A96E" opacity="0.8"/>
+        <ellipse cx="16" cy="6" rx="2" ry="4.5" fill="none" stroke="#C9A96E" stroke-width="0.65" opacity="0.5"/>
+        <ellipse cx="16" cy="26" rx="2" ry="4.5" fill="none" stroke="#C9A96E" stroke-width="0.65" opacity="0.5"/>
+        <ellipse cx="6" cy="16" rx="4.5" ry="2" fill="none" stroke="#C9A96E" stroke-width="0.65" opacity="0.5"/>
+        <ellipse cx="26" cy="16" rx="4.5" ry="2" fill="none" stroke="#C9A96E" stroke-width="0.65" opacity="0.5"/>
+      </svg>
+      <div class="fav-lbl">32px</div>
+    </div>
+
+    <!-- Champagne on ivory -->
+    <div class="fav-cell">
+      <svg width="64" height="64" viewBox="0 0 64 64" style="border-radius:13px;background:#FAF7F2;border:1px solid rgba(201,169,110,0.2);">
+        <circle cx="32" cy="32" r="10" fill="none" stroke="#C9A96E" stroke-width="0.9"/>
+        <circle cx="32" cy="32" r="4" fill="#C9A96E" opacity="0.65"/>
+        <ellipse cx="32" cy="14" rx="3" ry="8" fill="none" stroke="#C9A96E" stroke-width="0.7" opacity="0.45"/>
+        <ellipse cx="32" cy="50" rx="3" ry="8" fill="none" stroke="#C9A96E" stroke-width="0.7" opacity="0.45"/>
+        <ellipse cx="14" cy="32" rx="8" ry="3" fill="none" stroke="#C9A96E" stroke-width="0.7" opacity="0.45"/>
+        <ellipse cx="50" cy="32" rx="8" ry="3" fill="none" stroke="#C9A96E" stroke-width="0.7" opacity="0.45"/>
+        <ellipse cx="18" cy="18" rx="4" ry="7" fill="none" stroke="#C9A96E" stroke-width="0.55" opacity="0.28" transform="rotate(-45,18,18)"/>
+        <ellipse cx="46" cy="18" rx="4" ry="7" fill="none" stroke="#C9A96E" stroke-width="0.55" opacity="0.28" transform="rotate(45,46,18)"/>
+        <ellipse cx="18" cy="46" rx="4" ry="7" fill="none" stroke="#C9A96E" stroke-width="0.55" opacity="0.28" transform="rotate(45,18,46)"/>
+        <ellipse cx="46" cy="46" rx="4" ry="7" fill="none" stroke="#C9A96E" stroke-width="0.55" opacity="0.28" transform="rotate(-45,46,46)"/>
+      </svg>
+      <div class="fav-lbl">Ivory</div>
+    </div>
+
+    <!-- Blush bg -->
+    <div class="fav-cell">
+      <svg width="64" height="64" viewBox="0 0 64 64" style="border-radius:13px;background:#F2D6CF;">
+        <circle cx="32" cy="32" r="10" fill="none" stroke="#B76E79" stroke-width="0.9"/>
+        <circle cx="32" cy="32" r="4" fill="#B76E79" opacity="0.65"/>
+        <ellipse cx="32" cy="14" rx="3" ry="8" fill="none" stroke="#B76E79" stroke-width="0.7" opacity="0.45"/>
+        <ellipse cx="32" cy="50" rx="3" ry="8" fill="none" stroke="#B76E79" stroke-width="0.7" opacity="0.45"/>
+        <ellipse cx="14" cy="32" rx="8" ry="3" fill="none" stroke="#B76E79" stroke-width="0.7" opacity="0.45"/>
+        <ellipse cx="50" cy="32" rx="8" ry="3" fill="none" stroke="#B76E79" stroke-width="0.7" opacity="0.45"/>
+        <ellipse cx="18" cy="18" rx="4" ry="7" fill="none" stroke="#B76E79" stroke-width="0.55" opacity="0.28" transform="rotate(-45,18,18)"/>
+        <ellipse cx="46" cy="18" rx="4" ry="7" fill="none" stroke="#B76E79" stroke-width="0.55" opacity="0.28" transform="rotate(45,46,18)"/>
+        <ellipse cx="18" cy="46" rx="4" ry="7" fill="none" stroke="#B76E79" stroke-width="0.55" opacity="0.28" transform="rotate(45,18,46)"/>
+        <ellipse cx="46" cy="46" rx="4" ry="7" fill="none" stroke="#B76E79" stroke-width="0.55" opacity="0.28" transform="rotate(-45,46,46)"/>
+      </svg>
+      <div class="fav-lbl">Blush</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ════ 5. TOKENS ════ -->
+<div class="s5">
+  <div class="hdiv"></div>
+  <div class="two-col">
+
+    <!-- Colour tokens -->
+    <div class="col">
+      <div class="col-title">Official Colour Tokens</div>
+      <div class="swatch-row">
+        <div class="sw"><div class="sw-b" style="background:#1A1A1A;"></div><div class="sw-n">Soft Black</div><div class="sw-h">#1A1A1A</div></div>
+        <div class="sw"><div class="sw-b" style="background:#C9A96E;"></div><div class="sw-n">Champagne Gold</div><div class="sw-h">#C9A96E</div></div>
+        <div class="sw"><div class="sw-b" style="background:#B76E79;"></div><div class="sw-n">Rose Gold</div><div class="sw-h">#B76E79</div></div>
+      </div>
+      <div class="swatch-row">
+        <div class="sw"><div class="sw-b" style="background:#7D6B5E;"></div><div class="sw-n">Taupe</div><div class="sw-h">#7D6B5E</div></div>
+        <div class="sw"><div class="sw-b" style="background:#F2D6CF;"></div><div class="sw-n">Blush Pink</div><div class="sw-h">#F2D6CF</div></div>
+        <div class="sw"><div class="sw-b" style="background:#FAF7F2;border:1px solid rgba(0,0,0,0.08);"></div><div class="sw-n">Ivory</div><div class="sw-h">#FAF7F2</div></div>
+        <div class="sw"><div class="sw-b" style="background:#FFFDF9;border:1px solid rgba(0,0,0,0.06);"></div><div class="sw-n">Warm White</div><div class="sw-h">#FFFDF9</div></div>
+      </div>
+    </div>
+
+    <div class="vdiv"></div>
+
+    <!-- Typography tokens -->
+    <div class="col">
+      <div class="col-title">Typography System</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:300;font-style:italic;color:#1A1A1A;letter-spacing:0.06em;line-height:1;">Havaku</div>
+      <div style="font-family:'Manrope',sans-serif;font-size:9px;font-weight:300;letter-spacing:0.2em;color:rgba(125,107,94,0.55);text-transform:uppercase;margin-top:3px;">Cormorant Garamond · Display / Logo</div>
+
+      <div style="margin-top:14px;font-family:'Manrope',sans-serif;font-size:15px;font-weight:300;color:#1A1A1A;letter-spacing:0.02em;line-height:1.5;">Elegant beauty for every celebration</div>
+      <div style="font-family:'Manrope',sans-serif;font-size:9px;font-weight:300;letter-spacing:0.2em;color:rgba(125,107,94,0.55);text-transform:uppercase;margin-top:3px;">Manrope Light · Body / UI</div>
+
+      <div style="margin-top:14px;font-family:'Manrope',sans-serif;font-size:9px;font-weight:500;letter-spacing:0.42em;text-transform:uppercase;color:#C9A96E;">Skincare · Bridal · Handmade</div>
+      <div style="font-family:'Manrope',sans-serif;font-size:9px;font-weight:300;letter-spacing:0.2em;color:rgba(125,107,94,0.55);text-transform:uppercase;margin-top:3px;">Manrope · Labels / Buttons</div>
+    </div>
+
+  </div>
+  <div class="hdiv"></div>
+</div>
+
+</body>
+</html>
