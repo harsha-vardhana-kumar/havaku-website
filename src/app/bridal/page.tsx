@@ -1,3 +1,6 @@
+import type { Metadata } from 'next';
+import { getSeoData } from '@/lib/getSeoData';
+
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
@@ -6,6 +9,36 @@ import BookingCtaBanner from '@/components/BookingCtaBanner';
 import ImagePlaceholder from '@/components/ImagePlaceholder';
 import BeforeAfterSlider from '@/components/BeforeAfterSlider';
 import TestimonialsSection from '@/components/TestimonialsSection';
+
+const seo = getSeoData('/bridal');
+
+export const metadata: Metadata = {
+  title: seo.title,
+  description: seo.description,
+  keywords: seo.keywords,
+  alternates: {
+    canonical: seo.canonical,
+  },
+  openGraph: {
+    title: seo.ogTitle,
+    description: seo.ogDescription,
+    images: [
+      {
+        url: seo.ogImage,
+        width: 1200,
+        height: 630,
+      },
+    ],
+    url: seo.canonical,
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: seo.ogTitle,
+    description: seo.ogDescription,
+    images: [seo.ogImage],
+  },
+};
 
 const bridalPackages = [
     {
