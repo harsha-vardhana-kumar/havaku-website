@@ -9,7 +9,7 @@
     "canonical": "https://havaku.com/"
   },
   "/bridal": {
-    "title": "harsha",
+    "title": "harsha-havaku",
     "description": "harsha testing",
     "keywords": "harsha keywords",
     "ogTitle": "harsha og title",
@@ -36,13 +36,13 @@
     "canonical": "https://havaku.com/jewelry"
   },
   "/handmade": {
-    "title": "Handmade Beauty Essentials — Havaku",
-    "description": "Artisan handmade beauty products including soaps, face packs, hair oils, skincare, and bridal beauty kits. Pure and natural ingredients.",
-    "keywords": "handmade beauty, handmade soap, face pack, hair oil, skincare, bridal kit, natural beauty products, havaku handmade",
-    "ogTitle": "Handmade Beauty Essentials — Havaku",
-    "ogDescription": "Pure handmade soaps, face packs, hair oils, skincare, and complete bridal beauty kits. All natural ingredients.",
-    "ogImage": "/images/og/handmade.jpg",
-    "canonical": "https://havaku.com/handmade"
+    "title": "harsha-handmade",
+    "description": "harsha-handmade",
+    "keywords": "harsha-handmade",
+    "ogTitle": "",
+    "ogDescription": "",
+    "ogImage": "",
+    "canonical": ""
   },
   "/gallery": {
     "title": "Gallery — Bridal & Beauty Transformations | Havaku",
@@ -54,22 +54,22 @@
     "canonical": "https://havaku.com/gallery"
   },
   "/about": {
-    "title": "About Havaku — Our Story & Vision",
-    "description": "Learn about Havaku's journey — a premium beauty studio built on passion, artistry, and celebrating every woman's unique beauty.",
-    "keywords": "about havaku, havaku story, beauty studio about, havaku vision, havaku team",
-    "ogTitle": "About Havaku — Our Story",
-    "ogDescription": "A premium beauty studio built on passion and artistry. Discover the Havaku story and our vision.",
-    "ogImage": "/images/og/about.jpg",
-    "canonical": "https://havaku.com/about"
+    "title": "about havaku",
+    "description": "",
+    "keywords": "",
+    "ogTitle": "",
+    "ogDescription": "",
+    "ogImage": "",
+    "canonical": ""
   },
   "/contact": {
-    "title": "Contact Havaku — Book a Consultation",
-    "description": "Get in touch with Havaku to book a bridal consultation, beauty appointment, or enquire about our jewelry and handmade products.",
-    "keywords": "contact havaku, book consultation, havaku appointment, havaku location, havaku enquiry",
-    "ogTitle": "Contact Havaku — Book Your Appointment",
-    "ogDescription": "Book a bridal consultation or beauty appointment. We'd love to be part of your celebration.",
-    "ogImage": "/images/og/contact.jpg",
-    "canonical": "https://havaku.com/contact"
+    "title": "harsahaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "description": "harsahaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "keywords": "harsahaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "ogTitle": "harsahaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "ogDescription": "harsahaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "ogImage": "",
+    "canonical": ""
   },
   "_defaults": {
     "title": "Havaku — Premium Beauty & Bridal Studio",
