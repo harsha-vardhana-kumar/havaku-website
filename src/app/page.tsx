@@ -1,5 +1,7 @@
 'use client';
 
+import type { Metadata } from 'next';
+import { getSeoData } from '@/lib/getSeoData';
 import { useState, useEffect } from 'react';
 import { useCart } from '@/context/CartContext';
 import { useWishlist } from '@/context/WishlistContext';
