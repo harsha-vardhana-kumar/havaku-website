@@ -4,6 +4,40 @@ import WhatsAppButton from '@/components/WhatsAppButton';
 import Link from 'next/link';
 import BookingCtaBanner from '@/components/BookingCtaBanner';
 
+import type { Metadata } from 'next';
+import { getSeoData } from '@/lib/getSeoData';
+
+const seo = getSeoData('/beauty-studio');
+
+export const metadata: Metadata = {
+  title: seo.title,
+  description: seo.description,
+  keywords: seo.keywords,
+  alternates: {
+    canonical: seo.canonical,
+  },
+  openGraph: {
+    title: seo.ogTitle,
+    description: seo.ogDescription,
+    images: seo.ogImage ? [
+      {
+        url: seo.ogImage,
+        width: 1200,
+        height: 630,
+      },
+    ] : [],
+    url: seo.canonical,
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: seo.ogTitle,
+    description: seo.ogDescription,
+    images: seo.ogImage ? [seo.ogImage] : [],
+  },
+};
+
+
 const services = [
     { icon: '〰', title: 'Threading', desc: 'Precise eyebrow, upper lip, and facial threading for clean, defined results.' },
     { icon: '✦', title: 'Waxing', desc: 'Smooth, gentle waxing for face and body using premium wax formulas.' },

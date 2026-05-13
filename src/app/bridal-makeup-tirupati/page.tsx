@@ -1,3 +1,4 @@
+import { getSeoData } from '@/lib/getSeoData';
 import { Metadata } from 'next';
 import ServiceLandingLayout from '@/components/ServiceLandingLayout';
 
@@ -5,12 +6,34 @@ const SERVICE_NAME = "Bridal Makeup";
 const LOCATION = "Tirupati";
 const SLUG = "bridal-makeup-tirupati";
 
+const seo = getSeoData('/bridal-makeup-tirupati');
+
 export const metadata: Metadata = {
-    title: `${SERVICE_NAME} in ${LOCATION} | HAVAKU Beauty Studio`,
-    description: `Looking for the best ${SERVICE_NAME} in ${LOCATION}? HAVAKU offers premium ${SERVICE_NAME.toLowerCase()} services to make your special day unforgettable.`,
-    alternates: {
-        canonical: `https://havaku.com/${SLUG}`
-    }
+  title: seo.title,
+  description: seo.description,
+  keywords: seo.keywords,
+  alternates: {
+    canonical: seo.canonical,
+  },
+  openGraph: {
+    title: seo.ogTitle,
+    description: seo.ogDescription,
+    images: seo.ogImage ? [
+      {
+        url: seo.ogImage,
+        width: 1200,
+        height: 630,
+      },
+    ] : [],
+    url: seo.canonical,
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: seo.ogTitle,
+    description: seo.ogDescription,
+    images: seo.ogImage ? [seo.ogImage] : [],
+  },
 };
 
 export default function LandingPage() {

@@ -6,16 +6,37 @@ import { PostHogProvider } from "@/providers/PostHogProvider";
 import { PostHogPageView } from "@/components/PostHogPageView";
 import { Suspense } from "react";
 
+import { getSeoData } from '@/lib/getSeoData';
+
+const seo = getSeoData('/');
+
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.havaku.com'),
-  title: "HAVAKU — Where Beauty Meets Celebration",
-  description: "Premium beauty studio for bridal transformations, curated jewelry, and handcrafted beauty essentials.",
-  keywords: "HAVAKU, bridal makeup, beauty studio, jewelry, handmade beauty products",
+  title: seo.title,
+  description: seo.description,
+  keywords: seo.keywords,
+  alternates: {
+    canonical: seo.canonical,
+  },
   manifest: '/manifest.json',
   openGraph: {
-    title: "HAVAKU — Where Beauty Meets Celebration",
-    description: "Premium beauty studio for bridal transformations, curated jewelry, and handcrafted beauty essentials.",
+    title: seo.ogTitle,
+    description: seo.ogDescription,
+    images: seo.ogImage ? [
+      {
+        url: seo.ogImage,
+        width: 1200,
+        height: 630,
+      },
+    ] : [],
+    url: seo.canonical,
     type: "website",
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: seo.ogTitle,
+    description: seo.ogDescription,
+    images: seo.ogImage ? [seo.ogImage] : [],
   },
   icons: {
     icon: [
