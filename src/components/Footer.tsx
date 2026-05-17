@@ -58,7 +58,7 @@ export default function Footer() {
                                 <Instagram size={18} />
                             </a>
                             <a
-                                href="https://wa.me/917386797648"
+                                href="https://wa.me/916303890435"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 style={{
@@ -144,19 +144,13 @@ export default function Footer() {
                         <div style={{ fontFamily: 'Manrope, sans-serif', fontSize: '0.84rem', color: 'rgba(250,247,242,0.65)', lineHeight: 1.85 }}>
                             <p style={{ marginBottom: '1rem' }}>
                                 HAVAKU Beauty Studio<br />
-                                Hyderabad &amp; Andhra Pradesh
+                                Hyderabad
                             </p>
                             
                             <div style={{ marginBottom: '1rem' }}>
                                 <span style={{ fontSize: '0.75rem', color: 'rgba(250,247,242,0.4)', letterSpacing: '0.06em', textTransform: 'uppercase' }}>Hyderabad</span><br />
-                                Bhavani —&nbsp;
-                                <a href="tel:+917995950839" style={{ color: 'var(--champagne-gold)', textDecoration: 'none' }}>+91 79959 50839</a>
-                            </div>
-                            
-                            <div style={{ marginBottom: '1rem' }}>
-                                <span style={{ fontSize: '0.75rem', color: 'rgba(250,247,242,0.4)', letterSpacing: '0.06em', textTransform: 'uppercase' }}>Andhra Pradesh</span><br />
-                                Tanuja —&nbsp;
-                                <a href="tel:+917386797648" style={{ color: 'var(--champagne-gold)', textDecoration: 'none' }}>+91 73867 97648</a>
+                                Laila —&nbsp;
+                                <a href="tel:+916303890435" style={{ color: 'var(--champagne-gold)', textDecoration: 'none' }}>+91 63038 90435</a>
                             </div>
                             
                             <a href="mailto:hellohavaku@gmail.com" style={{ color: 'var(--champagne-gold)', textDecoration: 'none', display: 'block', marginTop: '0.5rem' }}>hellohavaku@gmail.com</a>

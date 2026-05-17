@@ -78,7 +78,7 @@ export default function ContactPage() {
 
                             {/* Info blocks */}
                             {[
-                                { label: 'WhatsApp', value: '+91 73867 97648', href: 'https://wa.me/917386797648', icon: '📱' },
+                                { label: 'WhatsApp', value: '+91 63038 90435', href: 'https://wa.me/916303890435', icon: '📱' },
                                 { label: 'Email', value: 'hellohavaku@gmail.com', href: 'mailto:hellohavaku@gmail.com', icon: '✉️' },
                                 { label: 'Instagram', value: '@havaku.official', href: 'https://instagram.com', icon: '📸' },
                             ].map((item) => (
@@ -132,7 +132,7 @@ export default function ContactPage() {
                                     <p style={{ fontFamily: 'Manrope, sans-serif', fontSize: '0.88rem', color: 'var(--taupe)', lineHeight: 1.8, marginBottom: '2rem' }}>
                                         Your inquiry has been received. We&apos;ll get back to you within 24 hours.
                                     </p>
-                                    <a href="https://wa.me/917386797648" target="_blank" rel="noopener noreferrer" className="btn-primary">
+                                    <a href="https://wa.me/916303890435" target="_blank" rel="noopener noreferrer" className="btn-primary">
                                         Chat on WhatsApp
                                     </a>
                                 </div>
@@ -182,7 +182,7 @@ export default function ContactPage() {
                                             <span style={{ fontFamily: 'Manrope, sans-serif', fontSize: '0.78rem', color: 'var(--taupe)' }}>or</span>
                                         </div>
                                         <a
-                                            href="https://wa.me/917386797648"
+                                            href="https://wa.me/916303890435"
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             style={{
