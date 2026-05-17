@@ -59,7 +59,7 @@ export default function ServiceLandingLayout({
                         <p style={{ fontFamily: 'Manrope, sans-serif', fontSize: '1.1rem', color: 'rgba(250,247,242,0.8)', lineHeight: 1.6, maxWidth: '600px', margin: '0 auto 2rem' }}>
                             {heroSubtext}
                         </p>
-                        <a href="https://wa.me/917386797648" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ display: 'inline-block' }}>
+                        <a href="https://wa.me/916303890435" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ display: 'inline-block' }}>
                             Book Your Session
                         </a>
                     </div>

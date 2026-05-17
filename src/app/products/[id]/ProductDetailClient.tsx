@@ -200,7 +200,7 @@ export function ProductDetailClient({ product }: { product: Product }) {
 
                             {/* WhatsApp Enquiry */}
                             <a
-                                href={`https://wa.me/917386797648?text=Hi%20HAVAKU%2C%20I%20am%20interested%20in%20${encodeURIComponent(product.name)}${selectedVariant ? `%20(${encodeURIComponent(selectedVariant)})` : ''}%20%E2%80%94%20%E2%82%B9${product.price}.`}
+                                href={`https://wa.me/916303890435?text=Hi%20HAVAKU%2C%20I%20am%20interested%20in%20${encodeURIComponent(product.name)}${selectedVariant ? `%20(${encodeURIComponent(selectedVariant)})` : ''}%20%E2%80%94%20%E2%82%B9${product.price}.`}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 style={{

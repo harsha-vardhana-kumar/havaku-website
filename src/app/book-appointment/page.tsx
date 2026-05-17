@@ -602,7 +602,7 @@ export default function BookAppointmentPage() {
                                     <p style={{ fontFamily: 'Manrope, sans-serif', fontSize: '0.78rem', color: 'var(--taupe)', marginTop: '0.85rem', lineHeight: 1.7 }}>
                                         Need a different time?{' '}
                                         <a
-                                            href="https://wa.me/917386797648?text=Hi%20HAVAKU%2C%20I%20need%20a%20custom%20appointment%20time."
+                                            href="https://wa.me/916303890435?text=Hi%20HAVAKU%2C%20I%20need%20a%20custom%20appointment%20time."
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             style={{ color: '#25D366', fontWeight: 600, textDecoration: 'none' }}
@@ -712,7 +712,7 @@ export default function BookAppointmentPage() {
                             </p>
                             <div style={{ display: 'flex', gap: '0.75rem', justifyContent: 'center', flexWrap: 'wrap' }}>
                                 <a
-                                    href={`https://wa.me/917386797648?text=Hi%20HAVAKU%2C%20I%20just%20booked%20a%20${encodeURIComponent(selectedService)}%20appointment%20for%20${encodeURIComponent(`${MONTHS[calMonth]} ${selectedDate}`)}%20at%20${encodeURIComponent(selectedTime)}.%20My%20name%20is%20${encodeURIComponent(form.name)}.`}
+                                    href={`https://wa.me/916303890435?text=Hi%20HAVAKU%2C%20I%20just%20booked%20a%20${encodeURIComponent(selectedService)}%20appointment%20for%20${encodeURIComponent(`${MONTHS[calMonth]} ${selectedDate}`)}%20at%20${encodeURIComponent(selectedTime)}.%20My%20name%20is%20${encodeURIComponent(form.name)}.`}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     style={{

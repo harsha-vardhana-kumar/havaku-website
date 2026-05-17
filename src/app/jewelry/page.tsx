@@ -180,7 +180,7 @@ export default function JewelryPage() {
                                                     {addedId === product.id ? '✓ Added' : 'Add to Cart'}
                                                 </button>
                                                 <a
-                                                    href={`https://wa.me/917386797648?text=Hi%20HAVAKU%2C%20I%20am%20interested%20in%20the%20${encodeURIComponent(product.name)}%20(₹${product.price}).`}
+                                                    href={`https://wa.me/916303890435?text=Hi%20HAVAKU%2C%20I%20am%20interested%20in%20the%20${encodeURIComponent(product.name)}%20(₹${product.price}).`}
                                                     target="_blank"
                                                     rel="noopener noreferrer"
                                                     onClick={(e) => e.stopPropagation()}
@@ -233,7 +233,7 @@ export default function JewelryPage() {
                             Inquire via WhatsApp for custom sizing, bridal sets, or bulk orders.
                         </p>
                         <a
-                            href="https://wa.me/917386797648"
+                            href="https://wa.me/916303890435"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="btn-primary"

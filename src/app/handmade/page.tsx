@@ -143,7 +143,7 @@ function ProductCard({ product, onProductClick, isHighlighted }: { product: Prod
                                 {added ? '✓ Added to Cart' : 'Add to Cart'}
                             </button>
                             <a
-                                href={`https://wa.me/917386797648?text=Hi%20HAVAKU%2C%20I%20want%20to%20order%20${encodeURIComponent(product.name)}${selectedVariant ? `%20(${encodeURIComponent(selectedVariant)})` : ''}%20(₹${product.price}).`}
+                                href={`https://wa.me/916303890435?text=Hi%20HAVAKU%2C%20I%20want%20to%20order%20${encodeURIComponent(product.name)}${selectedVariant ? `%20(${encodeURIComponent(selectedVariant)})` : ''}%20(₹${product.price}).`}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 onClick={(e) => e.stopPropagation()}
@@ -298,7 +298,7 @@ export default function HandmadePage() {
                     <p style={{ fontFamily: 'Manrope, sans-serif', fontSize: '0.9rem', color: 'rgba(26,26,26,0.7)', marginBottom: '2rem' }}>
                         Order via WhatsApp for fastest response and custom requests.
                     </p>
-                    <a href="https://wa.me/917386797648" target="_blank" rel="noopener noreferrer"
+                    <a href="https://wa.me/916303890435" target="_blank" rel="noopener noreferrer"
                         style={{ background: 'var(--soft-black)', color: 'var(--warm-white)', fontFamily: 'Manrope, sans-serif', fontWeight: 600, fontSize: '0.85rem', letterSpacing: '0.08em', textTransform: 'uppercase', padding: '0.9rem 2.5rem', borderRadius: '2px', textDecoration: 'none', display: 'inline-block' }}>
                         Order via WhatsApp
                     </a>

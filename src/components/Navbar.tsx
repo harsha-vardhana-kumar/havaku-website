@@ -246,7 +246,7 @@ export default function Navbar() {
                             
                             {/* Mobile WhatsApp Link */}
                             <a
-                                href="https://wa.me/917386797648"
+                                href="https://wa.me/916303890435"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 onClick={() => setMenuOpen(false)}

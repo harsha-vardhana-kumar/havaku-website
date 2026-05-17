@@ -55,7 +55,7 @@ ${form.name}
 ${form.address}, ${form.city}, ${form.state} - ${form.pincode}
 📞 +91 ${form.phone}${form.email ? `\n✉️ ${form.email}` : ''}${form.notes ? `\n\n*Notes:* ${form.notes}` : ''}`;
 
-        const waUrl = `https://wa.me/917386797648?text=${encodeURIComponent(message)}`;
+        const waUrl = `https://wa.me/916303890435?text=${encodeURIComponent(message)}`;
         window.open(waUrl, '_blank');
 
         clearCart();

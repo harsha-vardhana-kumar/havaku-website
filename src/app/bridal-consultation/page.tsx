@@ -128,7 +128,7 @@ export default function BridalConsultationPage() {
                                     Our bridal team will reach out to you within 24 hours to schedule your consultation. We can&apos;t wait to be part of your special day!
                                 </p>
                                 <a
-                                    href="https://wa.me/917386797648?text=Hi%20HAVAKU%2C%20I%20just%20submitted%20a%20bridal%20consultation%20request!"
+                                    href="https://wa.me/916303890435?text=Hi%20HAVAKU%2C%20I%20just%20submitted%20a%20bridal%20consultation%20request!"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     style={{

@@ -13,7 +13,7 @@ export default function OrderTrackingPage() {
     function handleTrack(e: React.FormEvent) {
         e.preventDefault();
         const msg = `Hi HAVAKU! I'd like to track my order.${ref ? `\n*Order Ref:* ${ref}` : ''}\n*Phone:* +91 ${phone}`;
-        window.open(`https://wa.me/917386797648?text=${encodeURIComponent(msg)}`, '_blank');
+        window.open(`https://wa.me/916303890435?text=${encodeURIComponent(msg)}`, '_blank');
     }
 
     const isValid = phone.length >= 10;
